@@ -49,9 +49,18 @@ namespace MVC5.Models
     public class LoginViewModel
     {
         [Required]
+        [Display(Name = "Account")]
+        public string Account { get; set; }
+
+        [Required]
+        [Display(Name = "Domain")]
+        public string Domain { get; set; }
+
         [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        public string Email
+        {
+            get { return Account + "@" + Domain; }
+        }
 
         [Required]
         [DataType(DataType.Password)]

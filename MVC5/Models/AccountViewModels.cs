@@ -56,6 +56,11 @@ namespace MVC5.Models
         [Display(Name = "Domain")]
         public string Domain { get; set; }
 
+        [Required]
+        [Display(Name = "LoginUrl")]
+        public string LoginUrl { get; set; }
+
+
         [Display(Name = "Email")]
         public string Email
         {
@@ -74,9 +79,22 @@ namespace MVC5.Models
     public class RegisterViewModel
     {
         [Required]
-        [EmailAddress]
+        [Display(Name = "Account")]
+        public string Account { get; set; }
+
+        [Required]
+        [Display(Name = "Domain")]
+        public string Domain { get; set; }
+
+        [Required]
+        [Display(Name = "LoginUrl")]
+        public string LoginUrl { get; set; }
+
         [Display(Name = "Email")]
-        public string Email { get; set; }
+        public string Email
+        {
+            get { return Account + "@" + Domain; }
+        }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

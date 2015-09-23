@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.WebPages;
+using ClientAdapters;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -17,6 +20,8 @@ namespace MVC5.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+
+        public static IClient ClientAdapter { get; set; }
 
         public AccountController()
         {
@@ -73,8 +78,40 @@ namespace MVC5.Controllers
                 return View(model);
             }
 
+            // authenticate against the client
+            var response = ClientAdapter.GetProfile(model.Email, model.Password);
+            if (!string.IsNullOrEmpty(response.Error))
+            {
+                ModelState.AddModelError("", "Invalid login attempt.");
+                return View(model);
+            }
+
+            // register only the new user
+            var user = await SignInManager.UserManager.FindByEmailAsync(model.Email);
+            if (user != null) return RedirectToLocal(returnUrl);
+
+            user = new ApplicationUser { UserName = model.Email, Email = model.Email, LoginUrl = ClientAdapter.LoginUrl, Profile = response.GetProfileInJson() };
+            try
+            {
+                var result2 = await UserManager.CreateAsync(user, model.Password);
+                if (result2.Succeeded)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                ModelState.AddModelError("", "Invalid login attempt.");
+                return View(model);
+            }
+
+            return RedirectToLocal(returnUrl);
+
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
+            /*
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
@@ -89,6 +126,7 @@ namespace MVC5.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
+            */
         }
 
         //

@@ -281,25 +281,6 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Migrations\201509211609474_InitialCreate.resx">
-      <DependentUpon>201509211609474_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509211815508_AddProfile.resx">
-      <DependentUpon>201509211815508_AddProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509211916349_AddLoginUrl.resx">
-      <DependentUpon>201509211916349_AddLoginUrl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509211919064_AddLoginUrlRequired.resx">
-      <DependentUpon>201509211919064_AddLoginUrlRequired.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509211936397_AddLoginUrlRequired1.resx">
-      <DependentUpon>201509211936397_AddLoginUrlRequired1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509211943184_AddLoginUrlRequired2.resx">
-      <DependentUpon>201509211943184_AddLoginUrlRequired2.cs</DependentUpon>
-=======
     <ProjectReference Include="..\ClientAdapters\ClientAdapters.csproj">
       <Project>{d63a559e-97d1-4a04-a4ef-c3f1471220d9}</Project>
       <Name>ClientAdapters</Name>
@@ -308,7 +289,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201509232144239_initialize.resx">
       <DependentUpon>201509232144239_initialize.cs</DependentUpon>
->>>>>>> extLogin
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

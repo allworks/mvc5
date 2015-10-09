@@ -1,35 +1,55 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC5", "MVC5\MVC5.csproj", "{B93B1A78-AA81-468C-9841-5F5B416AB343}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "theapp", "http://localhost/theapp", "{91320FBC-1299-4201-B693-6DF15ED2D051}"
-	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "false"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
-		Debug.AspNetCompiler.VirtualPath = "/theapp"
-		Debug.AspNetCompiler.PhysicalPath = "C:\inetpub\wwwroot\theapp\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\theapp\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/theapp"
-		Release.AspNetCompiler.PhysicalPath = "C:\inetpub\wwwroot\theapp\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\theapp\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "C:\inetpub\wwwroot\theapp\"
-		DefaultWebSiteLanguage = "Visual Basic"
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC5.Tests", "MVC5.Tests\MVC5.Tests.csproj", "{0D715A5A-A6D5-43BD-B2CE-7D5E2752BCE1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAdapters", "ClientAdapters\ClientAdapters.csproj", "{D63A559E-97D1-4A04-A4EF-C3F1471220D9}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "client1", "http://localhost/client1", "{F3EBACAD-0AB0-4E10-8469-ADA634386CA7}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/client1"
+		Debug.AspNetCompiler.PhysicalPath = "client1\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\client1\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/client1"
+		Release.AspNetCompiler.PhysicalPath = "client1\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\client1\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "client1\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "client2", "http://localhost/client2", "{8A66E9DF-578D-40EE-B176-D04E4F88F1FB}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/client2"
+		Debug.AspNetCompiler.PhysicalPath = "client2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\client2\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/client2"
+		Release.AspNetCompiler.PhysicalPath = "client2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\client2\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "client2\"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +61,6 @@ Global
 		{B93B1A78-AA81-468C-9841-5F5B416AB343}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B93B1A78-AA81-468C-9841-5F5B416AB343}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B93B1A78-AA81-468C-9841-5F5B416AB343}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91320FBC-1299-4201-B693-6DF15ED2D051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91320FBC-1299-4201-B693-6DF15ED2D051}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91320FBC-1299-4201-B693-6DF15ED2D051}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{91320FBC-1299-4201-B693-6DF15ED2D051}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{0D715A5A-A6D5-43BD-B2CE-7D5E2752BCE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D715A5A-A6D5-43BD-B2CE-7D5E2752BCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D715A5A-A6D5-43BD-B2CE-7D5E2752BCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +69,14 @@ Global
 		{D63A559E-97D1-4A04-A4EF-C3F1471220D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D63A559E-97D1-4A04-A4EF-C3F1471220D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D63A559E-97D1-4A04-A4EF-C3F1471220D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3EBACAD-0AB0-4E10-8469-ADA634386CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3EBACAD-0AB0-4E10-8469-ADA634386CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3EBACAD-0AB0-4E10-8469-ADA634386CA7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3EBACAD-0AB0-4E10-8469-ADA634386CA7}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8A66E9DF-578D-40EE-B176-D04E4F88F1FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A66E9DF-578D-40EE-B176-D04E4F88F1FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A66E9DF-578D-40EE-B176-D04E4F88F1FB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A66E9DF-578D-40EE-B176-D04E4F88F1FB}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

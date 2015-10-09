@@ -149,7 +149,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\AccountControllerTest.cs" />
-    <Compile Include="TheAppTest.cs" />
+    <Compile Include="ClientTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

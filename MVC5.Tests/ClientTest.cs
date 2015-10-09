@@ -1,18 +1,17 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net;
 using System.Text;
 using ClientAdapters;
-using Newtonsoft.Json;
 using NUnit.Framework;
 using NameValueCoolection = System.Collections.Specialized.NameValueCollection;
-using UserProfileModel = MVC5.Models.UserProfileModel;
 
 namespace MVC5.Tests
 {
     [TestFixture]
-    public class TheAppTest
+    public class ClientTest
     {
-        private const string Url = "http://localhost/theapp";
+        private const string Url = "http://localhost/client1";
 
         [Test]
         public void GetProfoleShouldSucceed()
@@ -41,7 +40,6 @@ namespace MVC5.Tests
             string respBody = null;
             using (var client = new WebClient())
             {
-
                 try
                 {
                     var respBytes = client.UploadValues(Url, "POST", reqParms);
@@ -49,7 +47,7 @@ namespace MVC5.Tests
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e);
+                    Debug.WriteLine(e);
                 }
             }
             return respBody;

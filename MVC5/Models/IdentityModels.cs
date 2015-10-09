@@ -11,7 +11,7 @@ namespace MVC5.Models
     public class ApplicationUser : IdentityUser
     {
         [Required]
-        [MaxLength(120)]
+        [MaxLength(128)]
         public string LoginUrl { get; set; }
 
         [Required]

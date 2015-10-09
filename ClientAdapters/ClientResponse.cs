@@ -9,7 +9,7 @@ namespace ClientAdapters
 
         public string GetProfileInJson()
         {
-            return JsonConvert.SerializeObject(Profile);
+            return JsonConvert.SerializeObject(Profile, Formatting.None);
         }
     }
 }

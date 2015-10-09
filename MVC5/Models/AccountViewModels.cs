@@ -57,7 +57,7 @@ namespace MVC5.Models
         public string Domain { get; set; }
 
         [Required]
-        [Display(Name = "LoginUrl")]
+        [Display(Name = "Login Url")]
         public string LoginUrl { get; set; }
 
 
